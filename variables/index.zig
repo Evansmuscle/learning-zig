@@ -24,4 +24,19 @@ pub fn main() !void {
   print("{d}\n", .{bytes[5]});
   
   print("{}\n", .{mem.eql(u8, bytes, "H\x65llo")});
+  
+  const isTrue = true;
+  const isFalse = false;
+  
+  if (isTrue and isFalse) {
+    print("Cannot reach here");
+  }
+  
+  if (isTrue or isFalse) {
+    print("Will reach here!");
+  }
+  
+  var numChange = 5;
+  
+  numChange += 1;
 }
